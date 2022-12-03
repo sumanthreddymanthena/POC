@@ -22,7 +22,7 @@ const PORT=5000;
 
 app.use(cors())
 
-mongoose.connect('mongodb+srv://muneebkhan:Illuminate123@cluster0.bp7hnyi.mongodb.net/?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://sumanth:Illuminate123@cluster0.bp7hnyi.mongodb.net/?retryWrites=true&w=majority',
   {
     useNewUrlParser: true,
 
