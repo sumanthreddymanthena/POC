@@ -53,7 +53,7 @@ const Form1 = () =>{
     onSubmit={ (values) => {
       
       console.log('form submitted')
-      fetch('http://localhost:5000/form2/submitForm2', {
+      fetch('http://44.201.224.46:5000/form2/submitForm2', {
       method: 'POST', 
       headers: {
         'Content-Type': 'application/json',
