@@ -13,6 +13,7 @@ import authRouter from './routes/auth.js';
 import userRouter from './routes/users.js';
 import Form2 from './Form2.js';
 import formRouter2 from './routes/form2.js';
+const router = express.Router()
 
 
 const app=express();
@@ -41,6 +42,19 @@ app.use(bodyparser.json());
 app.use("/api",userRouter);
 app.use("/api",authRouter)
 app.use('/form2', formRouter2);
+
+app.get('/data', async (req, res)=>{
+try{
+  const questions = await Form2.find()
+  res.json(questions)
+}catch (err) {
+  res.status(500).json({message: err.message})
+}
+
+}
+
+)
+
 
 app.get('/', (req,res)=>{
     console.log('[TEST}]!');
